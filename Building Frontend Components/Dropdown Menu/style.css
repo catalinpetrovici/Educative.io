@@ -10,18 +10,34 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background: blue;
+}
+
 .menu {
+  margin: 0 auto;
+  width: 40rem;
   background: #f7f6f5;
   border-top: 1px solid #cfcfcf;
 }
 
-.menu__item {
+.menu__main__item {
   display: inline-block;
   padding: 0.5rem 2rem;
   border-bottom: 1px solid #cfcfcf;
 }
 
-.menu__item:hover {
+.menu__main__item:first-child:hover {
+  border-left: none;
+  margin-left: 0;
+}
+
+.menu__main__item:last-child:hover {
+  border-right: none;
+  margin-right: 0;
+}
+
+.menu__main__item:hover {
   background: white;
   border-bottom: none;
   border-right: 1px solid #cfcfcf;
@@ -29,13 +45,13 @@ html {
   margin: 0 -1px;
 }
 
-.menu__item--current .menu__item__link {
+.menu__main__item--current .menu__main__item__link {
   color: #333333;
   border-bottom: 2px solid #333;
   padding-bottom: 0.3rem;
 }
 
-.menu__item__link {
+.menu__main__item__link {
   text-decoration: none;
   color: #555;
   font-family: Roboto;
@@ -43,7 +59,13 @@ html {
   font-weight: 800;
 }
 
-.menu__item__link:hover {
+.menu__main__item__link:hover {
   text-decoration: underline;
   color: #1c60bb;
+}
+
+.menu__sub {
+  width: 40rem;
+  height: 10rem;
+  background: red;
 }
