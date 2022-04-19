@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-grey: #333333;
+  --light-grey: #555;
+  --border-grey: #cfcfcf;
+}
+
+body {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+}
+
+.search {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 30vh;
+}

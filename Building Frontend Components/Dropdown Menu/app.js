@@ -101,6 +101,7 @@ menu.onmouseleave = hideSubmenu;
 function deactivateMenuItem() {
   console.log('Write your code here');
   activeMenuItem.classList.remove('menu__main__item--active');
+  activeMenuItem.classList.remove('menu__main__item--current');
 }
 
 const submenu = document.getElementsByClassName('menu__sub')[0];
