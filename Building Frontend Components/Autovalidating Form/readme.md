@@ -33,5 +33,16 @@ There are three broad categories of tests that can be automated in web apps.
   - These test functions that are working together. For example, when one function calls another and uses that result in a different function call.
   - It only covers JavaScript code. A lot of business logic can be tested here.
 - Acceptance Tests
+
   - These test functionality in the web app as a whole through the client interface. For example, when the user clicks on a button, a popup appears.
   - A lot of the user experience guarantees are tested here. JavaScript should not be called directly; these tests are concerned with the outcome of user-taken actions.​
+
+  # Regular Expressions
+
+- let us define patterns to match strings
+
+```sh
+- const nameRegex = /^[a-zA-Z]+$/;
+```
+
+- The ^ means “start” and ＄ means “end.”

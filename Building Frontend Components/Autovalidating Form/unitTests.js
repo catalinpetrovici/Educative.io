@@ -1,27 +1,3 @@
-function isValidName(name) {
-  // TODO
-}
-
-function isValidEmail(name) {
-  // TODO
-}
-
-function validate(event) {
-  const inputElement = event.target;
-  inputElement.classList.add('signup__field__input--error');
-
-  const errorMessageElement = event.target.parentElement.getElementsByClassName(
-    'signup__field__error'
-  )[0];
-  errorMessageElement.innerHTML = 'Sample Error';
-}
-
-const inputs = document.getElementsByClassName('signup__field__input');
-
-for (const input of inputs) {
-  input.onblur = validate;
-}
-
 // Unit Tests
 
 function runTests() {
@@ -29,16 +5,22 @@ function runTests() {
   emailTest();
 }
 
-runTests();
-
 function runner({ inputs, expectedOutputs, func }) {
   let results = '';
   for (let i = 0; i < inputs.length; i++) {
-    const passFailString =
-      func(inputs[i]) === expectedOutputs[i]
-        ? 'Pass'
-        : '<span style="color: red">Fail</span>';
-    const result = `${func.name}(${inputs[i]}) === ${expectedOutputs[i]}: ${passFailString}`;
+    let result = '';
+    try {
+      func(inputs[i]);
+      result = `${func.name}(${inputs[i]}) passes`;
+      if (!expectedOutputs[i]) {
+        result = `<span style="color: red">${result}</span>`;
+      }
+    } catch (err) {
+      result = `${func.name}(${inputs[i]}) fails with message: ${err.message}`;
+      if (expectedOutputs[i]) {
+        result = `<span style="color: red">${result}</span>`;
+      }
+    }
     results += result + '<br>';
   }
   const resultsElement = document.getElementsByClassName('results')[0];
@@ -52,13 +34,13 @@ function firstNameTest() {
   runner({
     inputs: validInputs,
     expectedOutputs: validInputs.map((_) => true),
-    func: isValidName,
+    func: validateName,
   });
 
   runner({
     inputs: invalidInputs,
     expectedOutputs: invalidInputs.map((_) => false),
-    func: isValidName,
+    func: validateName,
   });
 }
 
@@ -69,12 +51,14 @@ function emailTest() {
   runner({
     inputs: validEmails,
     expectedOutputs: validEmails.map((_) => true),
-    func: isValidEmail,
+    func: validateEmail,
   });
 
   runner({
     inputs: invalidEmails,
     expectedOutputs: invalidEmails.map((_) => false),
-    func: isValidEmail,
+    func: validateEmail,
   });
 }
+
+runTests();
