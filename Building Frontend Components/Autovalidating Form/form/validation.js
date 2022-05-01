@@ -1,3 +1,5 @@
+// -------- Validation
+
 class ValidationError extends Error {
   constructor(message) {
     super();
@@ -131,7 +133,3 @@ function validate(inputElement) {
 }
 
 const inputs = document.getElementsByClassName('signup__field__inputs__input');
-
-for (const input of inputs) {
-  input.onblur = (event) => validate(event.target);
-}
