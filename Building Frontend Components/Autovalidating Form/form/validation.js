@@ -1,5 +1,3 @@
-// -------- Validation
-
 class ValidationError extends Error {
   constructor(message) {
     super();
@@ -131,5 +129,3 @@ function validate(inputElement) {
     inputElement.classList.add('signup__field__inputs__input--error');
   }
 }
-
-const inputs = document.getElementsByClassName('signup__field__inputs__input');

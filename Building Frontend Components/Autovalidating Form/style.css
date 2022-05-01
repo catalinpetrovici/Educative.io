@@ -51,7 +51,7 @@ body {
   margin-right: 0.5rem;
 }
 
-.signup__field__inputs__selection {
+.signup__field__inputs__selection--month {
   font-size: 13px;
   width: 5rem;
 }
@@ -64,4 +64,19 @@ body {
   color: var(--error-red);
   font-size: 13px;
   margin-top: 0.5rem;
+}
+
+.signup__selector {
+  position: absolute;
+  width: 10rem;
+  font-size: 13px;
+  background: grey;
+  color: white;
+}
+
+.signup__selector__list {
+}
+
+.signup__selector__list__item {
+  list-style-type: none;
 }

@@ -38,6 +38,7 @@
                     <input type="password" class="signup__field__inputs__input signup__field__inputs__input--password"
                         data-field="password" aria-label="Password" />
                 </div>
+                <div class="signup__field__guide signup__field__guide--password"></div>
                 <div class="signup__field__error"></div>
             </fieldset>
             <fieldset class="signup__field signup__field--confirm-password">
@@ -52,9 +53,9 @@
             <fieldset class="signup__field signup__field--birthday">
                 <legend class="signup__field__header">Birthday</legend>
                 <div class="signup__field__inputs">
-                    <div class="signup__field__inputs__input signup__field__inputs__selection">Month</div>
-                    <input type="hidden" class="signup__field__inputs__input--birth-month" data-field="month"
-                        aria-label="Month" />
+                    <div class="signup__field__inputs__input signup__field__inputs__selection signup__field__inputs__selection--month"
+                        data-field="month">Month</div>
+                    <input type="hidden" class="signup__field__inputs__input--birth-month" aria-label="Month" />
                     <input type="text" class="signup__field__inputs__input signup__field__inputs__input--birth-day"
                         placeholder="Day" data-field="day" aria-label="Day" />
                     <input type="text" class="signup__field__inputs__input signup__field__inputs__input--birth-year"
@@ -83,6 +84,7 @@
 
     <script src="./form/validation.js"></script>
     <script src="./form/guide.js"></script>
+    <script src="./form/restrictions.js"></script>
 
 </body>
 

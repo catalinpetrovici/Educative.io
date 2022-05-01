@@ -1,5 +1,3 @@
-// -------- Guide
-
 class Guide {
   constructor({ className, getGuidanceMessage }) {
     this.htmlNode = document.getElementsByClassName(className)[0];
@@ -95,13 +93,4 @@ function updateGuide(inputElement) {
     return;
   }
   guide.update(inputElement.value);
-}
-
-for (const input of inputs) {
-  input.onblur = (event) => {
-    validate(event.target);
-    hideGuide(event.target);
-  };
-  input.onfocus = (event) => showGuide(event.target);
-  input.onkeyup = (event) => updateGuide(event.target);
 }
