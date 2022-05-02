@@ -11,6 +11,62 @@ html {
   box-sizing: border-box;
 }
 
+.tweet {
+  width: 38rem;
+  background: grey;
+  position: relative;
+}
+
+.tweet__main__header {
+  background: green;
+}
+
+.tweet__main__header__item {
+  display: inline-block;
+}
+
+.tweet__main__message {
+  background: purple;
+}
+
+.tweet__footer {
+  background: orange;
+}
+
+.tweet__footer__stats {
+  display: inline-block;
+  width: 4rem;
+}
+
+.tweet__footer__stats__item {
+  display: inline-block;
+}
+
+.tweet__column {
+  display: inline-block;
+}
+
 .tweet__icon {
   width: 1rem;
+}
+
+.tweet__main {
+  width: 25rem;
+  background: red;
+}
+
+.tweet__menu {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.avatar {
+  width: 10rem;
+  background: blue;
+  vertical-align: top;
+}
+
+.avatar__image {
+  width: 100%;
 }
